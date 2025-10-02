@@ -1,0 +1,8 @@
+RewriteEngine On
+Options -Indexes
+# Ensure PHP files are handled normally; other assets fall through
+<IfModule mod_rewrite.c>
+  RewriteCond %{REQUEST_FILENAME} !-f
+  RewriteCond %{REQUEST_FILENAME} !-d
+  RewriteRule ^ index.php [QSA,L]
+</IfModule>
