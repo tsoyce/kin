@@ -1,0 +1,19 @@
+.theme-classic-plus{
+  /* слегка темнее фон, чище контраст */
+  --bg:#0b0f17; --panel:#101726; --card:#111a2a;
+  --ink:#eaf2ff; --ink-2:#d2e0ff; --muted:#a5b8d4;
+  --border:#1e2a3d; --divider:#1a2333;
+  --accent:#5ea0ff; --accent-2:#89b6ff;
+  /* мягче тени и скругления */
+  --shadow-sm:0 1px 2px rgba(2,6,23,.12);
+  --shadow-md:0 10px 28px rgba(2,6,23,.22);
+  --shadow-lg:0 18px 44px rgba(2,6,23,.28);
+}
+.theme-classic-plus body{ background:var(--bg); color:var(--ink); }
+.theme-classic-plus .card{ background:var(--card); border:1px solid var(--border); border-radius:18px; box-shadow:var(--shadow-sm); }
+.theme-classic-plus .btn{ background:var(--card); color:var(--ink); border:1px solid var(--border); border-radius:14px; padding:11px 16px; box-shadow:var(--shadow-sm); transition:box-shadow .2s,transform .2s; }
+.theme-classic-plus .btn:hover{ box-shadow:var(--shadow-md); transform:translateY(-1px); }
+.theme-classic-plus .input, .theme-classic-plus select, .theme-classic-plus textarea{ background:#0f1723; color:var(--ink); border:1px solid var(--border); border-radius:12px; padding:12px 14px; }
+.theme-classic-plus .input:focus{ outline:0; border-color:color-mix(in srgb,var(--accent) 55%, #0f1723); box-shadow:var(--focus-ring); }
+.theme-classic-plus header.header{ background:rgba(11,15,23,.8); border-bottom:1px solid var(--divider); backdrop-filter:saturate(1.2) blur(8px); }
+@media (prefers-reduced-motion:reduce){ .theme-classic-plus *{ transition:none!important; animation:none!important; } }

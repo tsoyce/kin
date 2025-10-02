@@ -1,0 +1,38 @@
+:root{
+  --font-sans:"Montserrat",system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-serif;
+  --bg:#0a0e14; --panel:#0f1723; --card:#111827;
+  --ink:#e9f2ff; --ink-2:#cfe0ff; --muted:#9fb3cc;
+  --border:#1f2a37; --divider:#1b2433;
+
+  --accent:#00d4ff; --accent-2:#6afc9c; --warning:#ffd166;
+  --danger:#ef4444; --success:#16a34a;
+
+  --radius:16px; --radius-sm:10px;
+  --shadow-sm:0 1px 2px rgba(2,6,23,.15);
+  --shadow-md:0 8px 24px rgba(2,6,23,.25);
+  --shadow-lg:0 16px 40px rgba(2,6,23,.35);
+
+  --sp-1:4px; --sp-2:8px; --sp-3:12px; --sp-4:16px; --sp-5:20px; --sp-6:24px; --sp-8:32px; --sp-10:40px;
+
+  /* токены эффектов для plus-тем */
+  --glow-cyan:#00d4ff;
+  --glow-green:#6afc9c;
+  --grid-cyan:rgba(0,212,255,.08);
+  --grid-green:rgba(106,252,156,.06);
+  --focus-ring:0 0 0 4px color-mix(in srgb, var(--accent) 22%, transparent);
+  color-scheme:dark;
+}
+html{ font-family:var(--font-sans); -webkit-text-size-adjust:100%; text-rendering:optimizeLegibility; font-synthesis-weight:none; }
+body{ letter-spacing:.01em; line-height:1.6; }
+h1,h2,h3,strong{ font-weight:600; }
+:focus-visible{ outline:0; box-shadow:var(--focus-ring); }
+.nav-icons .item.active{ background:color-mix(in srgb,var(--accent) 8%, var(--panel)); border-color:color-mix(in srgb,var(--accent) 25%, var(--panel)); }
+@media (max-width:560px){
+  .btn,
+  .input,
+  select,
+  textarea{
+    padding:14px 16px;
+    box-shadow:var(--shadow-sm);
+  }
+}

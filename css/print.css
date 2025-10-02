@@ -1,0 +1,19 @@
+@media print{
+  *{ -webkit-print-color-adjust:exact; print-color-adjust:exact; }
+  .no-print{ display:none!important; }
+  a{ text-decoration:none; }
+}
+/* LIGHT печать */
+@media print{
+  .theme-light body{ background:#FFFFFF!important; color:#0B1220!important; }
+  .theme-light .card,.theme-light .panel,.theme-light .table{ background:#FFFFFF!important; color:#0B1220!important; border-color:#E5EAF2!important; box-shadow:none!important; }
+  .theme-light a, .theme-light h1,.theme-light h2,.theme-light h3{ color:#0B1220!important; }
+}
+/* ТЁМНАЯ печать (classic / classic-plus / neon / neon-plus) */
+@media print{
+  :root:not(.theme-light) body{ background:#0a0e14!important; color:#e9f2ff!important; }
+  :root:not(.theme-light) .card,:root:not(.theme-light) .panel,:root:not(.theme-light) .table{
+    background:#0f1723!important; color:#e9f2ff!important; border-color:#1f2a37!important; box-shadow:none!important;
+  }
+  :root:not(.theme-light) a, :root:not(.theme-light) h1,:root:not(.theme-light) h2,:root:not(.theme-light) h3{ color:#e9f2ff!important; }
+}

@@ -1,0 +1,50 @@
+.theme-neon-plus{
+  /* неоновая палитра + чуть темнее фон для контраста */
+  --bg:#060a12; --panel:#0a1220; --card:#0b1424;
+  --ink:#e9f8ff; --ink-2:#cfeaff; --muted:#9cc9e6;
+  --border:#12233a; --divider:#0e1b2d;
+  --accent:#00e5ff; --accent-2:#6afc9c; --warning:#ffd166;
+
+  --shadow-sm:0 0 0 1px rgba(0,229,255,.20), 0 8px 20px rgba(0,229,255,.10);
+  --shadow-md:0 0 0 1px rgba(0,229,255,.28), 0 12px 32px rgba(0,229,255,.18);
+  --shadow-lg:0 0 0 1px rgba(0,229,255,.32), 0 18px 48px rgba(0,229,255,.24);
+}
+.theme-neon-plus body{
+  background:
+    radial-gradient(circle at 20% -10%, rgba(0,229,255,.10), transparent 40%),
+    radial-gradient(circle at 80% 110%, rgba(106,252,156,.08), transparent 40%),
+    repeating-linear-gradient(0deg, transparent 0 18px, var(--grid-cyan) 18px 19px),
+    repeating-linear-gradient(90deg, transparent 0 18px, var(--grid-green) 18px 19px),
+    var(--bg);
+  color:var(--ink);
+}
+.theme-neon-plus .card{
+  background:linear-gradient(180deg, rgba(7,14,25,.7), rgba(7,14,25,.9));
+  border:1px solid color-mix(in srgb,var(--accent) 35%, #0b1424);
+  border-radius:18px;
+  box-shadow:var(--shadow-sm), 0 0 24px rgba(0,229,255,.08);
+}
+.theme-neon-plus .btn{
+  position:relative;
+  background:linear-gradient(180deg, #0e1b2d, #0b1424);
+  color:#dff8ff;
+  border:1px solid color-mix(in srgb, var(--accent) 40%, #0b1424);
+  border-radius:14px; padding:11px 16px;
+  box-shadow:0 0 0 1px rgba(0,229,255,.28), 0 8px 24px rgba(0,229,255,.16);
+  transition:box-shadow .25s, transform .2s, border-color .25s;
+}
+.theme-neon-plus .btn::after{
+  content:""; position:absolute; inset:-2px;
+  border-radius:inherit; pointer-events:none;
+  background:conic-gradient(from 180deg at 50% 50%, var(--accent), transparent 30%, var(--accent-2), transparent 60%, var(--accent), transparent 100%);
+  filter:blur(8px); opacity:.25; z-index:-1;
+}
+.theme-neon-plus .btn:hover{ transform:translateY(-1px); box-shadow:var(--shadow-md), 0 0 32px rgba(0,229,255,.20); }
+.theme-neon-plus .btn.primary{ background:linear-gradient(180deg, color-mix(in srgb,#0e1b2d 60%, var(--accent)), #0b1424); color:#fff; }
+.theme-neon-plus .input, .theme-neon-plus select, .theme-neon-plus textarea{
+  background:#0a1220; color:#e9f8ff; border:1px solid color-mix(in srgb, var(--accent) 35%, #0a1220); border-radius:12px; padding:12px 14px;
+  box-shadow:inset 0 0 0 1px rgba(0,229,255,.15);
+}
+.theme-neon-plus .input:focus{ outline:0; border-color:var(--accent); box-shadow:0 0 0 2px rgba(0,229,255,.20), 0 0 24px rgba(0,229,255,.12); }
+.theme-neon-plus header.header{ background:rgba(6,10,18,.75); border-bottom:1px solid #0e1b2d; backdrop-filter:saturate(1.4) blur(10px); }
+@media (prefers-reduced-motion:reduce){ .theme-neon-plus *{ transition:none!important; animation:none!important; } }
